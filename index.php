@@ -26,8 +26,7 @@ include "global/conexion.php";
                 <span>Logo</span>
             </div>
         </a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="my-nav" class="collapse navbar-collapse">
@@ -63,25 +62,22 @@ include "global/conexion.php";
 
             <?php foreach ($listaProductos as $producto) { ?>
 
-            <div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" title="titulo del producto" src="<?php echo $producto['imagen']; ?>"
-                        alt="titulo">
-                    <div class="card-body">
-                        <span><?php echo $producto['nombre']; ?></span>
-                        <h5 class="card-title"><?php echo $producto['precio']; ?></h5>
-                        <p class="card-text"><?php echo $producto['descripcion']; ?></p>
-                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
-                            Carrito</button>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" title="<?php echo $producto['nombre']; ?>" src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>" data-toggle="popover" data-trigger="hover" data-content="<?php
+                                                                                                                                                                                                                                        echo $producto['descripcion'];
+                                                                                                                                                                                                                                        ?>">
+                        <div class="card-body">
+                            <span><?php echo $producto['nombre']; ?></span>
+                            <h5 class="card-title">€<?php echo $producto['precio']; ?></h5>
+                            <p class="card-text">Descripcion</p>
+                            <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
+                                Carrito</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             <?php } ?>
-
-
-
-
 
         </div>
 
@@ -89,6 +85,11 @@ include "global/conexion.php";
     <script src="./js/jquery-3.2.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
 </body>
 
 </html>
