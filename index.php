@@ -26,7 +26,8 @@ include "global/conexion.php";
                 <span>Logo</span>
             </div>
         </a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="my-nav" class="collapse navbar-collapse">
@@ -46,66 +47,42 @@ include "global/conexion.php";
             <a href="" class="badge badge-success">Ver Carrito</a>
         </div>
         <div class="row">
+
+            <?php
+            $sql = "select * from tblproductos";
+
+            $stmt = $conn->prepare($sql);
+
+            $stmt->execute();
+
+            $listaProductos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+            ?>
+
+            <?php foreach ($listaProductos as $producto) { ?>
+
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
+                    <img class="card-img-top" title="titulo del producto" src="<?php echo $producto['imagen']; ?>"
+                        alt="titulo">
                     <div class="card-body">
-                        <span>Titulo del producto</span>
-                        <h5 class="card-title">€300.00</h5>
-                        <p class="card-text">Descripción</p>
+                        <span><?php echo $producto['nombre']; ?></span>
+                        <h5 class="card-title"><?php echo $producto['precio']; ?></h5>
+                        <p class="card-text"><?php echo $producto['descripcion']; ?></p>
                         <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
                             Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
-                    <div class="card-body">
-                        <span>Titulo del producto</span>
-                        <h5 class="card-title">€300.00</h5>
-                        <p class="card-text">Descripción</p>
-                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
-                            Carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
-                    <div class="card-body">
-                        <span>Titulo del producto</span>
-                        <h5 class="card-title">€300.00</h5>
-                        <p class="card-text">Descripción</p>
-                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
-                            Carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
-                    <div class="card-body">
-                        <span>Titulo del producto</span>
-                        <h5 class="card-title">€300.00</h5>
-                        <p class="card-text">Descripción</p>
-                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
-                            Carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
-                    <div class="card-body">
-                        <span>Titulo del producto</span>
-                        <h5 class="card-title">€300.00</h5>
-                        <p class="card-text">Descripción</p>
-                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
-                            Carrito</button>
-                    </div>
-                </div>
-            </div>
+
+            <?php } ?>
+
+
+
+
+
         </div>
 
     </div>
