@@ -10,14 +10,24 @@
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar-brand d-flex justify-content-center">
-            <img src="./img/logo.jpg" alt="logo" id=logo>
+            <img src="./img/logo.jpg" alt="logo" id=logo width="30" height="30">
             <span>Logo</span>
         </div>
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">Carrito</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Carrito</a>
+
+            </div>
+        </div>
     </nav>
+
+
     <div class="container">
         <div class="alert alert-success">
             <a href="" class="badge badge-success">Ver Carrito</a>
