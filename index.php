@@ -35,7 +35,56 @@
                     </div>
                 </div>
             </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
+                    <div class="card-body">
+                        <span>Titulo del producto</span>
+                        <h5 class="card-title">€300.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
+                            Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
+                    <div class="card-body">
+                        <span>Titulo del producto</span>
+                        <h5 class="card-title">€300.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
+                            Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
+                    <div class="card-body">
+                        <span>Titulo del producto</span>
+                        <h5 class="card-title">€300.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
+                            Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" title="titulo del producto" src="./img/titulo.jpg" alt="titulo">
+                    <div class="card-body">
+                        <span>Titulo del producto</span>
+                        <h5 class="card-title">€300.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" type="submit" name="btnAccion" value="agregar">Agregar al
+                            Carrito</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
     <script src="./js/jquery-3.2.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
